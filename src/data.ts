@@ -71,5 +71,11 @@ export const data = {
       'Zasténej tak hlasitě, jak jen můžeš bez zasmání.',
       'Dejte francouzský polibek hráči po své pravici.'
     ]
+  },
+  group: {
+    truth: ['Kdo z vás byl podle vás všech největší darebak v dětství a proč?'],
+    dare: [
+      'Každý hráč se skupiny si musí dat se svojí dvojíci (vedle sebe sedíci) pusu na líco. Kto odmítne. Dáva si 3 panáky které mu nalejou ostatní.'
+    ]
   }
 }

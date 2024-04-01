@@ -3,7 +3,7 @@ import {
   faArrowLeft,
   faCircleQuestion
 } from '@fortawesome/free-solid-svg-icons'
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { data } from '../data'
 
 const gradients = [
@@ -25,11 +25,21 @@ function App() {
   const [gradient, setGradient] = useState(
     gradients[Math.floor(Math.random() * gradients.length)]
   )
+  const [title, setTitle] = useState('')
   const [truth, setTruth] = useState(true)
   const [category, setCategory] = useState<'funny' | 'sexistic'>('funny')
   const [text, setText] = useState('')
 
-  const getRandomTextWithCategory = (category: 'funny' | 'sexistic') => {
+  const audio = useMemo(() => {
+    const click = new Audio('/click.wav')
+    return {
+      click
+    }
+  }, [])
+
+  const getRandomTextWithCategory = (
+    category: 'funny' | 'sexistic' | 'group'
+  ) => {
     const texts = data[category][truth ? 'truth' : 'dare']
     return texts[Math.floor(Math.random() * texts.length)]
   }
@@ -40,16 +50,37 @@ function App() {
 
   useEffect(() => {
     setText(getRandomText())
+    setTitle('Pravda')
   }, [])
 
   const getRandomGradient = () => {
     return gradients[Math.floor(Math.random() * gradients.length)]
   }
 
-  const change = (category: 'funny' | 'sexistic') => {
-    setTruth(Math.random() < 0.3)
+  const change = (category: 'funny' | 'sexistic' | 'group') => {
+    audio.click.playbackRate = 1.5
+    audio.click.play()
+    const truth = Math.random() < 0.3
+    const group = Math.random() < 0.15
 
-    setCategory(category)
+    setTruth(truth)
+    if (group) {
+      if (truth) {
+        setTitle('Skupinová pravda')
+      } else {
+        setTitle('Skupinový úkol')
+      }
+      category = 'group'
+    } else {
+      if (truth) {
+        setTitle('Pravda')
+      } else {
+        setTitle('Úkol')
+      }
+
+      setCategory(category as 'funny' | 'sexistic')
+    }
+
     setGradient(getRandomGradient())
     setText(getRandomTextWithCategory(category))
   }
@@ -78,7 +109,7 @@ function App() {
           }
         >
           <h2 className={'mb-8 text-4xl font-black uppercase text-white'}>
-            {truth ? 'Pravda' : 'Úkol'}
+            {title}
           </h2>
           <p className={'text-2xl font-bold text-white'}>{text}</p>
         </div>
