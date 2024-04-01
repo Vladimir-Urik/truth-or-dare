@@ -29,9 +29,13 @@ function App() {
   const [category, setCategory] = useState<'funny' | 'sexistic'>('funny')
   const [text, setText] = useState('')
 
-  const getRandomText = () => {
+  const getRandomTextWithCategory = (category: 'funny' | 'sexistic') => {
     const texts = data[category][truth ? 'truth' : 'dare']
     return texts[Math.floor(Math.random() * texts.length)]
+  }
+
+  const getRandomText = () => {
+    return getRandomTextWithCategory(category)
   }
 
   useEffect(() => {
@@ -47,7 +51,7 @@ function App() {
 
     setCategory(category)
     setGradient(getRandomGradient())
-    setText(getRandomText())
+    setText(getRandomTextWithCategory(category))
   }
 
   return (
