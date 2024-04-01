@@ -1,0 +1,25 @@
+name: Deploy website to GitHub Pages
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run : yarn
+        shell: bash
+      - run : yarn build
+        shell: bash
+      - run : git config user.name github-actions
+        shell: bash
+      - run : git config user.email github-actions@github.com
+        shell: bash
+      - run : git --work-tree dist add --all
+        shell: bash
+      - run : git commit -m "Auto build & deploy"
+        shell: bash
+      - run : git push origin HEAD:gh-pages --force
+        shell: bash

@@ -1,0 +1,11 @@
+{
+  "theme_color" : "302d2e",
+  "background_color" : "302d2e",
+  "display" : "standalone",
+  "scope" : "/",
+  "start_url" : "/",
+  "name" : "Truth Or Dare",
+  "short_name" : "Truth Or Dare",
+  "description" : "Truth Or Dare by Vladimir Urik, Daniel Amico, Simon",
+  "icons":[{"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}]
+}
