@@ -5,7 +5,7 @@ export const Guidelines = () => {
         'absolute bottom-0 top-[70px] z-50 h-[calc(100%-70px)] w-full p-4'
       }
     >
-      <div className={'size-full rounded-md bg-black bg-opacity-60 p-4'}>
+      <div className={'size-full rounded-xl bg-black bg-opacity-60 p-4'}>
         <h2 className={'text-center text-4xl font-bold text-white'}>
           Průvodce
         </h2>
@@ -38,8 +38,7 @@ export const Guidelines = () => {
               <span className={'font-bold'}>Smajlík:</span> Funny úkoly/pravdy.
             </li>
             <li>
-              <span className={'font-bold'}>Srdíčko:</span> Erotické
-              úkoly/pravdy.
+              <span className={'font-bold'}>Lilek:</span> Erotické úkoly/pravdy.
             </li>
             <li>
               <span className={'font-bold'}>Šance na pravdu:</span> 30%

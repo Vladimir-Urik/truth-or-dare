@@ -20,14 +20,15 @@ export function Game({ setGradient }: GameProps) {
   }, [])
 
   const getRandomTextWithCategory = (
-    category: 'funny' | 'sexistic' | 'group'
+    category: 'funny' | 'sexistic' | 'group',
+    truth = true
   ) => {
     const texts = data[category][truth ? 'truth' : 'dare']
     return texts[Math.floor(Math.random() * texts.length)]
   }
 
   const getRandomText = () => {
-    return getRandomTextWithCategory(category)
+    return getRandomTextWithCategory(category, truth)
   }
 
   useEffect(() => {
@@ -64,7 +65,7 @@ export function Game({ setGradient }: GameProps) {
     }
 
     setGradient(getRandomGradient())
-    setText(getRandomTextWithCategory(category))
+    setText(getRandomTextWithCategory(category, truth))
   }
 
   return (
@@ -74,10 +75,12 @@ export function Game({ setGradient }: GameProps) {
           'absolute left-1/2 top-1/2 z-0 w-full -translate-x-1/2 -translate-y-1/2 px-8 text-center'
         }
       >
-        <h2 className={'mb-8 text-4xl font-black uppercase text-white'}>
-          {title}
-        </h2>
-        <p className={'text-2xl font-bold text-white'}>{text}</p>
+        <div key={text}>
+          <h2 className={'title mb-8 text-5xl font-black uppercase text-white'}>
+            {title}
+          </h2>
+          <p className={'title text-2xl font-bold text-white'}>{text}</p>
+        </div>
       </div>
 
       <div
@@ -101,11 +104,7 @@ export function Game({ setGradient }: GameProps) {
           }
           onClick={() => change('sexistic')}
         >
-          <img
-            src={'/heart-with-arrow_1f498.png'}
-            alt={'heart'}
-            className={'size-8'}
-          />
+          <img src={'/egg.png'} alt={'egg'} className={'size-8'} />
         </button>
       </div>
     </>

@@ -19,7 +19,18 @@ export const gradients = [
   'from-indigo-500 to-blue-500',
   'from-red-500 to-orange-500',
   'from-emerald-400 to-cyan-400',
-  'from-slate-500 to-slate-800'
+  'from-slate-500 to-slate-800',
+  'from-rose-500 to-pink-500',
+  'from-blue-400 to-gray-800',
+  'from-yellow-600 to-orange-600',
+  'from-red-400 to-green-300',
+  'from-purple-700 to-blue-600',
+  'from-teal-500 to-amber-600',
+  'from-cyan-500 to-indigo-600',
+  'from-lime-600 to-green-400',
+  'from-orange-500 to-pink-400',
+  'from-indigo-400 to-red-400',
+  'from-fuchsia-500 to-yellow-500'
 ]
 
 export function App() {
@@ -59,7 +70,7 @@ export function App() {
     <div className={'relative h-screen w-full overflow-hidden'}>
       <div
         className={
-          'left-O absolute top-0 z-10 flex w-full items-center justify-between p-8 text-xl text-white'
+          'absolute top-0 z-10 flex w-full items-center justify-between p-8 text-xl text-white'
         }
       >
         <button
@@ -71,7 +82,7 @@ export function App() {
         </button>
         <button
           onClick={() => {
-            setScreen('guidelines')
+            setScreen(screen === 'game' ? 'guidelines' : 'game')
           }}
         >
           <FontAwesomeIcon icon={faCircleQuestion} />
