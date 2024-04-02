@@ -47,7 +47,7 @@ export const Guidelines = () => {
               <span className={'font-bold'}>Šance na úkol:</span> 70%
             </li>
             <li>
-              <span className={'font-bold'}>Šance na skupinový úkol:</span> 15%
+              <span className={'font-bold'}>Šance na skupinový úkol:</span> 10%
             </li>
           </ul>
         </div>

@@ -24,7 +24,16 @@ export function Game({ setGradient }: GameProps) {
     truth = true
   ) => {
     const texts = data[category][truth ? 'truth' : 'dare']
-    return texts[Math.floor(Math.random() * texts.length)]
+    if (texts.length === 1) {
+      return texts[0]
+    }
+
+    const randomText = texts[Math.floor(Math.random() * texts.length)]
+    while (randomText === text) {
+      return texts[Math.floor(Math.random() * texts.length)]
+    }
+
+    return randomText
   }
 
   const getRandomText = () => {
@@ -44,7 +53,7 @@ export function Game({ setGradient }: GameProps) {
     audio.click.playbackRate = 1.5
     audio.click.play()
     const truth = Math.random() < 0.3
-    const group = Math.random() < 0.15
+    const group = Math.random() < 0.1
 
     setTruth(truth)
     if (group) {
