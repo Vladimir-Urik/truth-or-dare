@@ -8,8 +8,8 @@ interface GameProps {
 
 export function Game({ setGradient }: GameProps) {
   const [title, setTitle] = useState('')
-  const [truth, setTruth] = useState(true)
-  const [category, setCategory] = useState<'funny' | 'sexistic'>('funny')
+  const [, setTruth] = useState(true)
+  const [, setCategory] = useState<'funny' | 'sexistic'>('funny')
   const [text, setText] = useState('')
   const [side, setSide] = useState<'pravici' | 'levici'>('pravici')
 
@@ -37,13 +37,9 @@ export function Game({ setGradient }: GameProps) {
     return randomText
   }
 
-  const getRandomText = () => {
-    return getRandomTextWithCategory(category, truth)
-  }
-
   useEffect(() => {
-    setText(getRandomText())
-    setTitle('Pravda')
+    setText('Vyber si kategorii pomocí kliknutí na smajlíka nebo lilek.')
+    setTitle('Začni hru')
   }, [])
 
   const getRandomGradient = () => {
