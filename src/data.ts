@@ -17,7 +17,7 @@ export const data = {
     dare: [
       "Rikej 'strč prst skrz krk' 20 sekund v kuse a vyber si osobu, co ti bude dávat facku pokaždé, co to posereš.",
       'Přeskoč nejvyšší překážku, kterou ti spoluhráči dokážou připravit.',
-      'Nechej hráče na tvé levici olíznout kus toaletního papíru a nos ho na čele 2 kola hry.',
+      'Nechej hráče na tvé {side} olíznout kus toaletního papíru a nos ho na čele 2 kola hry.',
       'Namíchej nejmladšímu hráči drink s minimálně 4 ingrediencemi.',
       "Po jedno kolo říkej všem 'Vaše veličenstvo'.",
       'Napiš Instagramovou poznámku pouze za pomoci chodidel.',
@@ -28,10 +28,13 @@ export const data = {
       'Napiš na libovolné sociální média, že vyhledáváš zralé záchody v tvém okolí.',
       'Jednu minutu imituj svoji mamu.',
       'Jednu minutu imituj svého tatu.',
-      'Příště, až půjdeš na záchod, musíš jít s hráčem po tvé levici.',
+      'Příště, až půjdeš na záchod, musíš jít s hráčem po tvé {side}.',
       '20 sekund imituj psa (na všech čtyřech).',
       '2 lidi tvého výběru řeknou vtip a ty rozhodneš, kdo z nich má horší a ten se napije (alkoholu).',
       'Vysnupej lajnu soli.',
+
+      // Moje nápady
+      'Zazpívej písničku, kterou si vybere hráč po tvé {side}. Spýtaj se ho, jestli chceš, aby si zazpíval s tebou.',
 
       // CTRL C A CTRL V
       'Napodobujte jiného hráče a nechte ostatní hádat, o koho jde.',
@@ -53,33 +56,37 @@ export const data = {
       'Chtěl bys někdy mit sex ve vane/sprse?'
     ],
     dare: [
-      'Strc hráči na tvé pravici palec do pusy na 10 sekund',
+      'Strc hráči na tvé {side} palec do pusy na 10 sekund',
       '2 kola vzdychej po každé věte',
       'Vyběr si spoluhráče a pošli mu fotku rozopnutého poklopce',
-      'Olízej sexuálnim rázem všechny prsty na rukou hráčovi na tvé pravici',
-      'Zahrej si fuck marry kill. Hráč po tvé pravici ti vybere tři lidi které budeš muset zařadit',
+      'Olízej sexuálnim rázem všechny prsty na rukou hráčovi na tvé {side}',
+      'Zahrej si fuck marry kill. Hráč po tvé {side} ti vybere tři lidi které budeš muset zařadit',
       'Dej si rtenku a dej pusu na čelo libovolnému hráči',
       'Nech libovolného hráče napsat rtenkou sex na tvé čelo',
       'Vyzvi libovolného člověka na pusu, jestli odmítne musíš si dat tři panáky.',
       'Rozepni nekomu poklopec zuby',
       'Napíš své jméno rtenkou na někoho (můžeš si vybrat na koho a kde to napíšeš',
 
+      // Moje napady
+      'Spývej erotickou/lásky plnou píseň pro hráče po tvé {side}.',
+
       // CTRL C A CTRL V
-      'Úpěnlivě poproste člověka po vaší levici, aby vám naplácal.',
+      'Úpěnlivě poproste člověka po vaší {side}, aby vám naplácal.',
       'Udělejte hráči naproti desetivteřinový lap dance.',
       'Vyber 2 lidi, kteří se MUSÍ políbit na ústa.',
       'Zasténej tak hlasitě, jak jen můžeš bez zasmání.',
-      'Dejte francouzský polibek hráči po své pravici.'
+      'Dejte francouzský polibek hráči po své {side}.'
     ]
   },
   group: {
     truth: [
       'Kdo z vás byl podle vás všech největší darebak v dětství a proč?',
-      'Kdo z vás by byl podle vás schopen chodit s učitelem?'
+      'Kdo z vás by byl podle vás schopen chodit s učitelem?',
+      'Kdo z vás má podle vás nejvěčší body count'
     ],
     dare: [
       'Každý hráč se skupiny si musí dat se svojí dvojíci (vedle sebe sedíci) pusu na líco. Kto odmítne. Dáva si 3 panáky které mu nalejou ostatní.',
-      "Kazdý hráč si musí dat na story fotku s někým z místnosti a napsat 'Můj nový partner'."
+      "Kazdý hráč si musí dat na story fotku s někým z místnosti a napsat 'Můj nový partner'.",
     ]
   }
 }

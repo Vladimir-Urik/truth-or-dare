@@ -11,6 +11,7 @@ export function Game({ setGradient }: GameProps) {
   const [truth, setTruth] = useState(true)
   const [category, setCategory] = useState<'funny' | 'sexistic'>('funny')
   const [text, setText] = useState('')
+  const [side, setSide] = useState<'pravici' | 'levici'>('pravici')
 
   const audio = useMemo(() => {
     const click = new Audio('/click.wav')
@@ -54,6 +55,8 @@ export function Game({ setGradient }: GameProps) {
     audio.click.play()
     const truth = Math.random() < 0.3
     const group = Math.random() < 0.1
+    const side = Math.random() < 0.5 ? 'pravici' : 'levici'
+    setSide(side)
 
     setTruth(truth)
     if (group) {
@@ -88,7 +91,9 @@ export function Game({ setGradient }: GameProps) {
           <h2 className={'title mb-8 text-5xl font-black uppercase text-white'}>
             {title}
           </h2>
-          <p className={'title text-2xl font-bold text-white'}>{text}</p>
+          <p className={'title text-2xl font-bold text-white'}>
+            {text.replace('{side}', side)}
+          </p>
         </div>
       </div>
 
