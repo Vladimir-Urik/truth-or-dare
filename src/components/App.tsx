@@ -30,7 +30,31 @@ export const gradients = [
   'from-lime-600 to-green-400',
   'from-orange-500 to-pink-400',
   'from-indigo-400 to-red-400',
-  'from-fuchsia-500 to-yellow-500'
+  'from-fuchsia-500 to-yellow-500',
+
+  'from-rose-500 via-red-400 to-orange-300',
+  'from-emerald-400 via-green-500 to-lime-600',
+  'from-fuchsia-600 via-purple-500 to-violet-600',
+  'from-cyan-400 via-blue-500 to-indigo-600',
+  'from-yellow-400 via-amber-500 to-orange-600',
+  'from-rose-500 via-pink-500 to-purple-600',
+  'from-teal-400 via-blue-500 to-indigo-600',
+  'from-green-400 via-teal-500 to-cyan-600',
+  'from-red-400 via-pink-500 to-purple-600',
+  'from-lime-500 via-yellow-600 to-amber-700',
+  'from-cyan-400 via-teal-500 to-blue-600',
+  'from-orange-400 via-red-500 to-pink-600',
+  'from-purple-500 via-indigo-600 to-blue-700',
+  'from-amber-500 via-yellow-600 to-lime-700',
+  'from-pink-500 via-purple-600 to-indigo-700',
+  'from-blue-500 via-teal-600 to-green-700',
+  'from-red-500 via-orange-600 to-yellow-700',
+  'from-rose-500 via-pink-600 to-purple-700',
+  'from-teal-400 via-blue-500 to-cyan-600',
+  'from-fuchsia-500 via-purple-600 to-violet-700',
+  'from-amber-400 via-yellow-500 to-lime-600',
+  'from-lime-500 via-green-600 to-teal-700',
+  'from-purple-400 via-indigo-500 to-blue-600'
 ]
 
 export function App() {
