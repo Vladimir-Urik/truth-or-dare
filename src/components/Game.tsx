@@ -29,9 +29,9 @@ export function Game({ setGradient }: GameProps) {
       return texts[0]
     }
 
-    const randomText = texts[Math.floor(Math.random() * texts.length)]
+    let randomText = texts[Math.floor(Math.random() * texts.length)]
     while (randomText === text) {
-      return texts[Math.floor(Math.random() * texts.length)]
+      randomText = texts[Math.floor(Math.random() * texts.length)]
     }
 
     return randomText
