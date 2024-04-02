@@ -73,9 +73,13 @@ export const data = {
     ]
   },
   group: {
-    truth: ['Kdo z vás byl podle vás všech největší darebak v dětství a proč?'],
+    truth: [
+      'Kdo z vás byl podle vás všech největší darebak v dětství a proč?',
+      'Kdo z vás by byl podle vás schopen chodit s učitelem?'
+    ],
     dare: [
-      'Každý hráč se skupiny si musí dat se svojí dvojíci (vedle sebe sedíci) pusu na líco. Kto odmítne. Dáva si 3 panáky které mu nalejou ostatní.'
+      'Každý hráč se skupiny si musí dat se svojí dvojíci (vedle sebe sedíci) pusu na líco. Kto odmítne. Dáva si 3 panáky které mu nalejou ostatní.',
+      "Kazdý hráč si musí dat na story fotku s někým z místnosti a napsat 'Můj nový partner'."
     ]
   }
 }
