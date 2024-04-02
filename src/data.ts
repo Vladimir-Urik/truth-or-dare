@@ -72,11 +72,11 @@ export const data = {
       'Nech libovolného hráče napsat rtenkou sex na tvé čelo',
       'Vyzvi libovolného člověka na pusu, jestli odmítne musíš si dat tři panáky.',
       'Rozepni nekomu poklopec zuby',
-      'Napíš své jméno rtenkou na někoho (můžeš si vybrat na koho a kde to napíšeš',
+      'Napíš své jméno rtenkou na někoho (můžeš si vybrat na koho a kde to napíšeš)',
 
       // Moje napady
       'Spývej erotickou/lásky plnou píseň pro hráče po tvé @side.',
-      'Udělej si fotku s kamarádem/kamarádkou (teď počas hry) a dej fotku na story (public) že je to tvuj nový/nová přítel/přítelkine. Něhej to tam aspoň 20 minut.',
+      'Udělej si fotku s kamarádem/kamarádkou (teď počas hry) a dej fotku na story (public) že je to tvuj nový/nová přítel/přítelkyně. Něhej to tam aspoň 20 minut.',
 
       // CTRL C A CTRL V
       'Úpěnlivě poproste člověka po vaší @side, aby vám naplácal.',
