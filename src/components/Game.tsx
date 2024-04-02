@@ -92,7 +92,7 @@ export function Game({ setGradient }: GameProps) {
             {title}
           </h2>
           <p className={'title text-2xl font-bold text-white'}>
-            {text.replace('{side}', side)}
+            {text.replace('@side', side)}
           </p>
         </div>
       </div>
