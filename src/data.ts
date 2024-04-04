@@ -13,6 +13,13 @@ export const data = {
       'Kdybyste zůstali na opuštěném ostrově, s kým byste chtěli tyto nesnáze sdílet?',
       'Co byla poslední lež, kterou jste řekli?',
       'Které 3 věci o tobě nikdo neví?',
+      'Jaký máš zlozvyk?',
+      'Načůral/a jsi někdy do bazénu?',
+      'Ztrapnil ses někdy před někým, kdo se ti líbí? Řekni nám o tom.',
+      'Vrtáš se v nose?',
+      'Kdy ses naposledy počůral?',
+      'Čůráš ve sprše?',
+      'Viděl/a jsi někdy mrtvolu?',
 
       // Moje nápady
       'Jsi furry?'
@@ -41,9 +48,17 @@ export const data = {
       'Nechej spoluhráče po tvé @side napsat do tvé IG poznámky, cokoliv chtějí. Musíš to nechat tam minimálně 20 minut.',
 
       // CTRL C A CTRL V
-      'Napodobujte jiného hráče a nechte ostatní hádat, o koho jde.',
       'Ztvárňujte svůj oblíbený film tak dlouho, dokud ostatní hráči nepřijdou na to, jaký film to je.',
-      'Napodob zvíře vybrané skupinou. Ak ti to nevyjde, musíš si dát panáka.'
+      'Napodob zvíře vybrané skupinou. Ak ti to nevyjde, musíš si dát panáka.',
+      'Napodobujte jiného hráče a nechte ostatní hádat, o koho jde.',
+      'Zavři oči, otevři pusu a nech přátele, aby ti do pusy dali cokoliv, co najdou v ledničce.',
+      'Spoluhráči ti vymyslí pózu ve které musíš zůstat až do konce kola.',
+      'Po další 2 kola musíš za každým jedním slovem říct „banán.',
+      'Zarepuj o koalách.',
+      'Hráč po tvé @side ti musí nanést rtěnku/lesk na tvoje rty.',
+      'Další 2 kola předstírej, že jsi kočka.',
+      'Nechej spoluhráče po své @side, aby tě učesal.',
+      'Sněz sušenku s majonézou.'
     ]
   },
   sexistic: {
@@ -58,9 +73,17 @@ export const data = {
       'Vyspal by ses s někým ze školky s tím, jak vypadají teď? S kým?',
       'Líbí se ti máma někoho z tvých kamarádů?',
       'Chtěl bys někdy mit sex ve vane/sprse?',
+      'Chtěl/a bys někdy dělat striptéra/striptérku?',
 
       // Moje napady
-      'Aký máš názor na BDSM?'
+      'Aký máš názor na BDSM?',
+
+      // CTRLC+CTRLV
+      'Poslal jsi někdy někomu nahou fotku?',
+      'Kdy naposledy se ti zdál sexuální sen?',
+      'Měl/a jsi někde sex po telefonu?',
+      'Přitahují tě starší partneři?',
+      'Spíš někdy nahá / nahý?'
     ],
     dare: [
       'Strc hráči na tvé @side palec do pusy na 10 sekund',
@@ -83,7 +106,9 @@ export const data = {
       'Udělejte hráči naproti desetivteřinový lap dance.',
       'Vyber 2 lidi, kteří se MUSÍ políbit na ústa.',
       'Zasténej tak hlasitě, jak jen můžeš bez zasmání.',
-      'Dejte francouzský polibek hráči po své @side.'
+      'Dejte francouzský polibek hráči po své @side.',
+      'Jdi ven a první osobě, kterou potkáš vyznej lásku.',
+      'Polib osobu po své @side na krk.'
     ]
   },
   group: {
