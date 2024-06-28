@@ -12,6 +12,7 @@ export function Game({ setGradient }: GameProps) {
   const [, setCategory] = useState<'funny' | 'sexistic'>('funny')
   const [text, setText] = useState('')
   const [side, setSide] = useState<'pravici' | 'levici'>('pravici')
+  const [timeToReset, setTimeToReset] = useState(0)
 
   const audio = useMemo(() => {
     const click = new Audio('/click.wav')
@@ -38,7 +39,7 @@ export function Game({ setGradient }: GameProps) {
   }
 
   useEffect(() => {
-    setText('Vyber si kategorii pomocí kliknutí na smajlíka nebo lilek.')
+    setText('Klikni na tlačítko níže.')
     setTitle('Začni hru')
   }, [])
 
@@ -46,13 +47,16 @@ export function Game({ setGradient }: GameProps) {
     return gradients[Math.floor(Math.random() * gradients.length)]
   }
 
-  const change = (category: 'funny' | 'sexistic' | 'group') => {
+  const change = () => {
     audio.click.playbackRate = 1.5
     audio.click.play()
-    const truth = Math.random() < 0.3
+    const sexistic = Math.random() < 0.7
+    const truth = Math.random() < 0.4
     const group = Math.random() < 0.1
     const side = Math.random() < 0.5 ? 'pravici' : 'levici'
     setSide(side)
+
+    let category = sexistic ? 'sexistic' : 'funny'
 
     setTruth(truth)
     if (group) {
@@ -73,11 +77,75 @@ export function Game({ setGradient }: GameProps) {
     }
 
     setGradient(getRandomGradient())
-    setText(getRandomTextWithCategory(category, truth))
+    setText(
+      getRandomTextWithCategory(
+        category as 'funny' | 'sexistic' | 'group',
+        truth
+      )
+    )
+
+    startTimer()
+  }
+
+  const startTimer = () => {
+    setTimeToReset(3)
+    const timer = setInterval(() => {
+      setTimeToReset((prev) => {
+        if (prev < 1) {
+          clearInterval(timer)
+          return 0
+        }
+        return prev - 1
+      })
+    }, 1000)
+  }
+
+  const getRemainingPercentage = () => {
+    return (timeToReset / 3) * 100
   }
 
   return (
     <>
+      {timeToReset > 0 && (
+        <div className={'absolute top-8 z-40 flex w-full justify-center'}>
+          <div className="relative size-20">
+            <svg
+              className="size-full"
+              width="36"
+              height="36"
+              viewBox="0 0 36 36"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="18"
+                cy="18"
+                r="16"
+                fill="none"
+                className="stroke-current text-white/40"
+                strokeWidth="3"
+              ></circle>
+              <g className="origin-center -rotate-90">
+                <circle
+                  cx="18"
+                  cy="18"
+                  r="16"
+                  fill="none"
+                  className="stroke-current text-yellow-300"
+                  strokeWidth="3"
+                  strokeDasharray="100"
+                  strokeDashoffset={getRemainingPercentage()}
+                ></circle>
+              </g>
+            </svg>
+
+            <div className="absolute start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+              <span className="text-center text-3xl font-bold text-gray-800 dark:text-white">
+                {timeToReset}
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
       <div
         className={
           'absolute left-1/2 top-1/2 z-0 w-full -translate-x-1/2 -translate-y-1/2 px-8 text-center'
@@ -93,28 +161,13 @@ export function Game({ setGradient }: GameProps) {
         </div>
       </div>
 
-      <div
-        className={'absolute bottom-8 left-0 z-10 flex w-full justify-between'}
-      >
+      <div className={'absolute bottom-12 z-10 flex w-full justify-center'}>
         <button
-          className={
-            'flex w-20 justify-end rounded-r-lg bg-black bg-opacity-30 p-4'
-          }
-          onClick={() => change('funny')}
+          disabled={timeToReset > 0}
+          className={'w-fit rounded-lg bg-black px-8 py-4 font-bold text-white disabled:opacity-50'}
+          onClick={() => change()}
         >
-          <img
-            src={'/winking-face-with-tongue_1f61c.png'}
-            alt={'wink'}
-            className={'size-8'}
-          />
-        </button>
-        <button
-          className={
-            'flex w-20 justify-start rounded-l-lg bg-black bg-opacity-30 p-4'
-          }
-          onClick={() => change('sexistic')}
-        >
-          <img src={'/egg.png'} alt={'egg'} className={'size-8'} />
+          Další
         </button>
       </div>
     </>

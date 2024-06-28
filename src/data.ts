@@ -58,7 +58,26 @@ export const data = {
       'Hráč po tvé @side ti musí nanést rtěnku/lesk na tvoje rty.',
       'Další 2 kola předstírej, že jsi kočka.',
       'Nechej spoluhráče po své @side, aby tě učesal.',
-      'Sněz sušenku s majonézou.'
+      'Sněz sušenku s majonézou.',
+
+      // ChatGPT
+      'Dej někomu masáž po dobu jedné minuty.',
+      'Vypij panáka bez použití rukou.',
+      'Udělej 10 kliků',
+      'Tanči na jednu minutu jako blázen bez hudby.',
+      'Obejmi každého v místnosti.',
+      'Vlož kostku ledu do kalhot a nech ji tam roztát.',
+      'Zazpívej národní hymnu na hlas.',
+      'Jdi ven a vykřikni první věc, co tě napadne.',
+      'Sundej si ponožky pomocí zubů.',
+      'Vezmi si něčí telefon a udělej legrační selfie.',
+      'Zpívej refrén své oblíbené písně.',
+      'Udělej 10 dřepů.',
+      'Jdi ven a zakřič nahlas „Miluju život!“',
+      'Řekni něco hezkého o každém ve skupině.',
+      'Nech hráče po své @side aby ti upravil tvůj účes (bez nůžek. bez stříháni)',
+      'Vyskoč na jedné noze desetkrát.',
+      'Vyzvedni někoho a přenes ho na místo podle jeho výběru.'
     ]
   },
   sexistic: {
@@ -83,7 +102,10 @@ export const data = {
       'Kdy naposledy se ti zdál sexuální sen?',
       'Měl/a jsi někde sex po telefonu?',
       'Přitahují tě starší partneři?',
-      'Spíš někdy nahá / nahý?'
+      'Spíš někdy nahá / nahý?',
+
+      // ChatGPT
+      'Sdílej erotický sen, který jsi měl nedávno.'
     ],
     dare: [
       'Strc hráči na tvé @side palec do pusy na 10 sekund',
@@ -108,7 +130,16 @@ export const data = {
       'Zasténej tak hlasitě, jak jen můžeš bez zasmání.',
       'Dejte francouzský polibek hráči po své @side.',
       'Jdi ven a první osobě, kterou potkáš vyznej lásku.',
-      'Polib osobu po své @side na krk.'
+      'Polib osobu po své @side na krk.',
+
+      // ChatGPT
+      'Polib osobu po své @side na rty.',
+      'Pošeptej osobě po své @side něco erotického do ucha.',
+      'Nech si zavázat oči a hádej, kdo tě líbá na krk.',
+      'Polib osobu po své @side na krk.',
+      'Předstírej orgasmu po dobu 10 sekund.',
+      'Drž ruce s osobou vedle tebe po následujících 5 minut.',
+      'Napiš SMS své ex s textem "Chybíš mi".'
     ]
   },
   group: {
@@ -119,7 +150,8 @@ export const data = {
     ],
     dare: [
       'Každý hráč se skupiny si musí dat se svojí dvojíci (vedle sebe sedíci) pusu na líco. Kto odmítne. Dáva si 3 panáky které mu nalejou ostatní.',
-      "Kazdý hráč si musí dat na story fotku s někým z místnosti a napsat 'Můj nový partner'."
+      'Kazdý hráč si musí dat na story fotku s někým z místnosti.',
+      'Vyběrte spoločne skupinově jednoho člověka kterému zavážete oči a namícháte mu tajný drink ktorý musí vypít.'
     ]
   }
 }
