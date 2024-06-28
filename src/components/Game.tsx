@@ -164,7 +164,9 @@ export function Game({ setGradient }: GameProps) {
       <div className={'absolute bottom-12 z-10 flex w-full justify-center'}>
         <button
           disabled={timeToReset > 0}
-          className={'w-fit rounded-lg bg-black px-8 py-4 font-bold text-white disabled:opacity-50'}
+          className={
+            'w-fit rounded-lg bg-black px-8 py-4 font-bold text-white disabled:opacity-50'
+          }
           onClick={() => change()}
         >
           Další
