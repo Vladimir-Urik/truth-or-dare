@@ -88,20 +88,33 @@ export function Game({ setGradient }: GameProps) {
   }
 
   const startTimer = () => {
-    setTimeToReset(3)
+    setTimeToReset(3000)
     const timer = setInterval(() => {
       setTimeToReset((prev) => {
-        if (prev < 1) {
+        if (prev < 10) {
           clearInterval(timer)
           return 0
         }
-        return prev - 1
+        return prev - 10
       })
-    }, 1000)
+    }, 10)
   }
 
   const getRemainingPercentage = () => {
-    return (timeToReset / 3) * 100
+    return (timeToReset / 3000) * 100
+  }
+
+  const getColor = () => {
+    const percentage = getRemainingPercentage()
+    if (percentage < 33) {
+      return 'stroke-green-500'
+    }
+
+    if (percentage < 66) {
+      return 'stroke-yellow-500'
+    }
+
+    return 'stroke-red-500'
   }
 
   return (
@@ -130,9 +143,10 @@ export function Game({ setGradient }: GameProps) {
                   cy="18"
                   r="16"
                   fill="none"
-                  className="stroke-current text-yellow-300"
+                  className={'stroke-current transition-colors ' + getColor()}
                   strokeWidth="3"
                   strokeDasharray="100"
+                  strokeLinecap={'round'}
                   strokeDashoffset={getRemainingPercentage()}
                 ></circle>
               </g>
@@ -140,7 +154,7 @@ export function Game({ setGradient }: GameProps) {
 
             <div className="absolute start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
               <span className="text-center text-3xl font-bold text-gray-800 dark:text-white">
-                {timeToReset}
+                {Math.round(timeToReset / 1000)}
               </span>
             </div>
           </div>
@@ -165,7 +179,7 @@ export function Game({ setGradient }: GameProps) {
         <button
           disabled={timeToReset > 0}
           className={
-            'w-fit rounded-lg bg-black px-8 py-4 font-bold text-white disabled:opacity-50'
+            'w-fit rounded-lg bg-black px-8 py-4 font-bold text-white disabled:opacity-30'
           }
           onClick={() => change()}
         >
